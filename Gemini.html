@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>His Grace Evangelical Movement — The Caring, Sharing and Soul-Winning Church</title>
+<meta name="description" content="His Grace Evangelical Movement, Ibadan. The Caring, Sharing and Soul-Winning Church. Join us for worship, prayer and the Word. 2026: Our Year of Revitalization.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#141f4b;
+  --navy-2:#1d2a5e;
+  --blue:#2f3f9e;
+  --blue-soft:#4a5ac0;
+  --gold:#f2b705;
+  --gold-soft:#ffd95e;
+  --cream:#faf6ec;
+  --white:#ffffff;
+  --ink:#1e2340;
+  --muted:#5b6180;
+  --line:#e7e2d4;
+  --shadow:0 18px 50px -18px rgba(20,31,75,.28);
+  --radius:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.65;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Fraunces',serif;line-height:1.15;color:var(--navy)}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.container{width:min(1140px,92%);margin:0 auto}
+.eyebrow{display:inline-flex;align-items:center;gap:.55rem;font-size:.78rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--blue)}
+.eyebrow::before{content:"";width:34px;height:2px;background:var(--gold)}
+.section{padding:88px 0}
+.section-head{max-width:680px;margin-bottom:48px}
+.section-head h2{font-size:clamp(1.9rem,3.4vw,2.7rem);margin:.55rem 0 .8rem}
+.section-head p{color:var(--muted);font-size:1.02rem}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- Top bar ---------- */
+.topbar{background:var(--navy);color:#cfd6f5;font-size:.82rem;padding:.5rem 0}
+.topbar .container{display:flex;flex-wrap:wrap;gap:.4rem 1.6rem;align-items:center;justify-content:space-between}
+.topbar a{color:#fff;font-weight:600}
+.topbar span b{color:var(--gold-soft);font-weight:700}
+.topbar .tb-right{display:flex;gap:1.2rem;flex-wrap:wrap}
+.topbar .dot{color:var(--gold)}
+
+/* ---------- Header / Nav ---------- */
+header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);transition:box-shadow .3s}
+header.scrolled{box-shadow:0 10px 30px -18px rgba(20,31,75,.35)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:.8rem 0;gap:1rem}
+.brand{display:flex;align-items:center;gap:.75rem;min-width:0}
+.brand img{width:54px;height:54px;border-radius:50%;object-fit:cover;border:2px solid var(--gold);flex:none}
+.brand-name{font-family:'Fraunces',serif;font-weight:700;color:var(--navy);font-size:1.06rem;line-height:1.15}
+.brand-tag{font-size:.68rem;color:var(--muted);letter-spacing:.04em}
+.nav-links{display:flex;align-items:center;gap:1.9rem;list-style:none}
+.nav-links a{font-size:.92rem;font-weight:600;color:var(--ink);position:relative;padding:.35rem 0}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--gold);transition:width .3s}
+.nav-links a:hover::after{width:100%}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;font-size:.92rem;padding:.78rem 1.5rem;border-radius:999px;border:2px solid transparent;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
+.btn-gold{background:var(--gold);color:var(--navy);box-shadow:0 10px 24px -10px rgba(242,183,5,.7)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 16px 30px -10px rgba(242,183,5,.75)}
+.btn-ghost{border-color:rgba(255,255,255,.55);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--navy-2);transform:translateY(-2px)}
+.btn-nav{padding:.6rem 1.25rem;font-size:.86rem}
+.hamburger{display:none;background:none;border:0;cursor:pointer;padding:.4rem}
+.hamburger span{display:block;width:26px;height:3px;background:var(--navy);margin:5px 0;border-radius:2px;transition:.3s}
+.hamburger.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;min-height:92vh;display:flex;align-items:center;color:#fff;isolation:isolate}
+.hero-bg{position:absolute;inset:0;z-index:-2}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,rgba(13,19,48,.94) 0%,rgba(20,31,75,.82) 45%,rgba(29,42,94,.55) 100%)}
+.hero-inner{padding:96px 0 140px;max-width:720px}
+.hero .kicker{display:inline-flex;align-items:center;gap:.6rem;background:rgba(242,183,5,.16);border:1px solid rgba(242,183,5,.5);color:var(--gold-soft);font-size:.78rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;padding:.5rem 1.1rem;border-radius:999px;margin-bottom:1.4rem}
+.hero h1{font-size:clamp(2.4rem,5.6vw,4.1rem);color:#fff;margin-bottom:1rem}
+.hero h1 em{color:var(--gold);font-style:italic}
+.hero p.lead{font-size:1.12rem;color:#dfe4ff;max-width:560px;margin-bottom:2.1rem}
+.hero-cta{display:flex;gap:1rem;flex-wrap:wrap}
+.theme-banner{margin-top:2.6rem;display:inline-flex;flex-direction:column;gap:.15rem;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-left:4px solid var(--gold);padding:1rem 1.4rem;border-radius:12px;backdrop-filter:blur(6px)}
+.theme-banner .ty{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-soft);font-weight:700}
+.theme-banner .tv{font-family:'Fraunces',serif;font-size:1.35rem;font-weight:600;color:#fff}
+.theme-banner .tr{font-size:.85rem;color:#c9d2ff}
+.scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.65);font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:.5rem}
+.scroll-hint::after{content:"";width:1px;height:38px;background:linear-gradient(var(--gold),transparent);animation:drip 1.8s infinite}
+@keyframes drip{0%{transform:scaleY(0);transform-origin:top}55%{transform:scaleY(1);transform-origin:top}56%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ---------- Info strip ---------- */
+.info-strip{background:var(--navy);color:#fff;position:relative;z-index:2}
+.info-strip .container{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.12)}
+.info-cell{background:var(--navy);padding:1.6rem 1.8rem;display:flex;gap:1rem;align-items:flex-start}
+.info-cell .ic{width:44px;height:44px;flex:none;border-radius:12px;background:rgba(242,183,5,.15);display:grid;place-items:center}
+.info-cell .ic svg{width:22px;height:22px;stroke:var(--gold)}
+.info-cell h4{color:#fff;font-size:1rem;margin-bottom:.15rem}
+.info-cell p{font-size:.86rem;color:#b9c3ee}
+.info-cell a{color:var(--gold-soft);font-weight:600}
+
+/* ---------- About ---------- */
+.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+.about-text h2{font-size:clamp(1.9rem,3.2vw,2.6rem);margin:.55rem 0 1.1rem}
+.about-text p{color:var(--muted);margin-bottom:1rem}
+.verse-card{margin-top:1.6rem;background:var(--cream);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:14px;padding:1.3rem 1.5rem}
+.verse-card q{font-family:'Fraunces',serif;font-style:italic;font-size:1.12rem;color:var(--navy);quotes:"“" "”"}
+.verse-card cite{display:block;margin-top:.5rem;font-style:normal;font-size:.82rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
+.purpose-cards{display:grid;gap:1.1rem}
+.pcard{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1.5rem 1.6rem;box-shadow:0 10px 30px -22px rgba(20,31,75,.35);display:flex;gap:1.1rem;transition:transform .25s,box-shadow .25s}
+.pcard:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.pcard .num{font-family:'Fraunces',serif;font-size:1.9rem;font-weight:700;color:var(--gold);line-height:1;flex:none;width:44px}
+.pcard h3{font-size:1.12rem;margin-bottom:.3rem}
+.pcard p{font-size:.92rem;color:var(--muted)}
+.pcard .ref{color:var(--blue);font-weight:700}
+
+/* ---------- Programmes ---------- */
+.prog{background:var(--cream)}
+.prog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem}
+.day-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 10px 28px -22px rgba(20,31,75,.3);display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
+.day-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.day-head{background:var(--navy);color:#fff;padding:1rem 1.4rem;display:flex;justify-content:space-between;align-items:center}
+.day-head h3{color:#fff;font-size:1.15rem}
+.day-head .dd{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-soft)}
+.prog-list{list-style:none;padding:1.1rem 1.4rem 1.4rem;display:grid;gap:.85rem;flex:1}
+.prog-list li{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;padding-bottom:.85rem;border-bottom:1px dashed var(--line)}
+.prog-list li:last-child{border-bottom:0;padding-bottom:0}
+.prog-list .pn{font-weight:600;font-size:.93rem}
+.prog-list .pt{font-size:.82rem;font-weight:700;color:var(--blue);white-space:nowrap;background:#eef1ff;padding:.2rem .6rem;border-radius:999px}
+.prog-note{margin-top:.4rem;font-size:.78rem;color:var(--muted);font-style:italic}
+.monthly{margin-top:1.6rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem}
+.mcard{background:linear-gradient(150deg,var(--navy),var(--navy-2));color:#fff;border-radius:var(--radius);padding:1.5rem 1.6rem;position:relative;overflow:hidden}
+.mcard::after{content:"";position:absolute;right:-40px;bottom:-40px;width:150px;height:150px;border-radius:50%;background:rgba(242,183,5,.14)}
+.mcard .mtag{font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--navy);background:var(--gold);display:inline-block;padding:.28rem .8rem;border-radius:999px;margin-bottom:.8rem}
+.mcard h3{color:#fff;font-size:1.15rem;margin-bottom:.3rem}
+.mcard p{font-size:.86rem;color:#b9c3ee}
+.mcard .mtime{color:var(--gold-soft);font-weight:700;font-size:.9rem;margin-top:.5rem;display:block}
+
+/* ---------- Pastoral Care Banner ---------- */
+.care-band{background:linear-gradient(120deg,#fff8e3,#fdf3cf);border:1px solid #f0dfa8;border-radius:var(--radius);padding:1.7rem 1.9rem;display:flex;gap:1.4rem;align-items:center;flex-wrap:wrap}
+.care-band .ci{width:52px;height:52px;flex:none;border-radius:50%;background:var(--gold);display:grid;place-items:center}
+.care-band .ci svg{width:26px;height:26px;stroke:var(--navy)}
+.care-band h3{font-size:1.2rem;margin-bottom:.25rem}
+.care-band p{font-size:.92rem;color:#6b5d1e}
+.care-band a{font-weight:700;color:var(--navy);border-bottom:2px solid var(--gold)}
+
+/* ---------- Leadership ---------- */
+.lead-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:1.5rem;align-items:stretch}
+.lead-main{background:linear-gradient(150deg,var(--navy),var(--navy-2));border-radius:var(--radius);overflow:hidden;display:grid;grid-template-columns:300px 1fr;color:#fff}
+.lead-main img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.lead-body{padding:2.2rem 2.2rem;display:flex;flex-direction:column;justify-content:center}
+.lead-body .lrole{color:var(--gold-soft);font-size:.74rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;margin-bottom:.5rem}
+.lead-body h3{color:#fff;font-size:1.7rem;margin-bottom:.6rem}
+.lead-body p{color:#c3cbf2;font-size:.95rem}
+.lead-side{display:grid;gap:1.5rem}
+.lead-pastor{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1.6rem;display:flex;gap:1.3rem;align-items:center;box-shadow:0 10px 28px -22px rgba(20,31,75,.3)}
+.lead-pastor img{width:96px;height:96px;border-radius:50%;object-fit:cover;object-position:center 20%;border:3px solid var(--gold);flex:none}
+.lead-pastor .pname{font-family:'Fraunces',serif;font-weight:700;font-size:1.15rem;color:var(--navy)}
+.lead-pastor .prole{font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-top:.15rem}
+.lead-pastor p.ptext{font-size:.85rem;color:var(--muted);margin-top:.4rem}
+.acmi{background:var(--cream);border:1px solid var(--line);border-radius:var(--radius);padding:1.6rem 1.7rem}
+.acmi h4{font-size:1.05rem;margin-bottom:.35rem}
+.acmi p{font-size:.88rem;color:var(--muted)}
+
+/* ---------- Giving ---------- */
+.give{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.give::before{content:"";position:absolute;left:-140px;bottom:-140px;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle,rgba(242,183,5,.18),transparent 65%)}
+.give .eyebrow{color:var(--gold-soft)}
+.give h2{color:#fff}
+.give .section-head p{color:#b9c3ee}
+.give-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem;position:relative}
+.give-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:var(--radius);padding:1.7rem;backdrop-filter:blur(4px)}
+.give-card .glabel{font-size:.74rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:.6rem}
+.give-card h3{color:#fff;font-size:1.2rem;margin-bottom:.9rem}
+.acct{display:flex;align-items:center;justify-content:space-between;gap:.8rem;background:rgba(255,255,255,.08);border:1px dashed rgba(255,255,255,.28);border-radius:10px;padding:.75rem 1rem}
+.acct .anum{font-size:1.15rem;font-weight:700;letter-spacing:.06em}
+.acct .abank{font-size:.78rem;color:#b9c3ee}
+.copy-btn{background:var(--gold);border:0;color:var(--navy);font-weight:700;font-size:.74rem;padding:.45rem .9rem;border-radius:999px;cursor:pointer;transition:.2s;white-space:nowrap}
+.copy-btn:hover{transform:scale(1.05)}
+.give-name{margin-top:1.4rem;text-align:center;font-size:.9rem;color:#c3cbf2}
+.give-name b{color:var(--gold-soft)}
+
+/* ---------- Contact ---------- */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.c-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1.9rem;box-shadow:0 10px 28px -22px rgba(20,31,75,.3)}
+.c-card h3{font-size:1.3rem;margin-bottom:1.1rem}
+.c-row{display:flex;gap:.95rem;align-items:flex-start;padding:.75rem 0;border-bottom:1px dashed var(--line)}
+.c-row:last-child{border-bottom:0}
+.c-row .ci2{width:38px;height:38px;flex:none;border-radius:10px;background:#eef1ff;display:grid;place-items:center}
+.c-row .ci2 svg{width:19px;height:19px;stroke:var(--blue)}
+.c-row b{display:block;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.c-row span,.c-row a{font-size:.94rem;font-weight:600;color:var(--ink)}
+.c-row a:hover{color:var(--blue)}
+.form{display:grid;gap:.9rem}
+.form label{font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.form input,.form textarea,.form select{width:100%;margin-top:.3rem;padding:.8rem 1rem;border:1.5px solid var(--line);border-radius:10px;font:inherit;font-size:.92rem;background:#fffdf8;transition:border .2s,box-shadow .2s}
+.form input:focus,.form textarea:focus,.form select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 4px rgba(242,183,5,.18)}
+.form textarea{resize:vertical;min-height:110px}
+
+/* ---------- Footer ---------- */
+footer{background:#0e1637;color:#9aa4d6;padding:60px 0 0;font-size:.9rem}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:2.4rem;padding-bottom:2.6rem}
+.f-brand{display:flex;align-items:center;gap:.7rem;margin-bottom:1rem}
+.f-brand img{width:46px;height:46px;border-radius:50%;border:2px solid var(--gold)}
+.f-brand span{font-family:'Fraunces',serif;font-weight:700;color:#fff;font-size:1.05rem}
+.f-grid p{line-height:1.7}
+.f-grid h4{color:#fff;font-size:.95rem;margin-bottom:1rem;letter-spacing:.06em}
+.f-grid ul{list-style:none;display:grid;gap:.55rem}
+.f-grid ul a:hover{color:var(--gold-soft)}
+.f-verse{font-family:'Fraunces',serif;font-style:italic;color:#cdd5ff;font-size:.95rem}
+.f-bottom{border-top:1px solid rgba(255,255,255,.1);padding:1.2rem 0;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.8rem}
+.f-bottom b{color:var(--gold-soft)}
+
+/* ---------- Toast / back-to-top ---------- */
+.toast{position:fixed;left:50%;bottom:30px;transform:translate(-50%,120px);background:var(--navy);color:#fff;padding:.9rem 1.5rem;border-radius:12px;border-left:4px solid var(--gold);box-shadow:var(--shadow);font-size:.9rem;font-weight:600;z-index:100;transition:transform .4s cubic-bezier(.2,.9,.3,1.2);max-width:90%}
+.toast.show{transform:translate(-50%,0)}
+.to-top{position:fixed;right:22px;bottom:22px;width:46px;height:46px;border-radius:50%;background:var(--gold);color:var(--navy);border:0;font-size:1.2rem;cursor:pointer;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:.3s;z-index:90}
+.to-top.show{opacity:1;pointer-events:auto}
+.to-top:hover{transform:translateY(-3px)}
+
+/* ---------- Responsive ---------- */
+@media(max-width:1020px){
+  .prog-grid,.monthly,.give-grid{grid-template-columns:repeat(2,1fr)}
+  .f-grid{grid-template-columns:1fr 1fr}
+  .lead-grid{grid-template-columns:1fr}
+}
+@media(max-width:880px){
+  .nav-links{
+    position:fixed;
+    inset:0 0 0 auto;
+    width:min(320px,85vw);
+    background: #ffffff !important; /* Solid white background */
+    flex-direction:column;
+    justify-content:center;
+    gap:1.8rem;
+    padding:2rem;
+    transform:translateX(105%);
+    transition:transform .35s ease;
+    z-index:70;
+  }
+  .nav-links.open{
+    transform:none;
+    box-shadow:-10px 0 30px rgba(0,0,0,0.2);
+  }
+  .nav-links a{
+    color: #141f4b !important; /* Dark text so links are clear */
+    font-size:1.1rem;
+  }
+  .hamburger{display:block;z-index:80;position:relative}
+  .hamburger.open span{
+    background: #141f4b !important; /* Keeps 'X' button visible on white */
+  }
+  .about-grid,.contact-grid{grid-template-columns:1fr}
+  .info-strip .container{grid-template-columns:1fr}
+  .lead-main{grid-template-columns:1fr}
+  .lead-main img{height:320px}
+}
+
+  .nav-links a{color:#fff;font-size:1.1rem}
+  .hamburger{display:block;z-index:80;position:relative}
+  .hamburger.open span{background:#fff}
+  .about-grid,.contact-grid{grid-template-columns:1fr}
+  .info-strip .container{grid-template-columns:1fr}
+  .lead-main{grid-template-columns:1fr}
+  .lead-main img{height:320px}
+@media(max-width:620px){
+  .section{padding:64px 0}
+  .prog-grid,.monthly,.give-grid,.f-grid{grid-template-columns:1fr}
+  .topbar .tb-right{display:none}
+  .hero-inner{padding:70px 0 120px}
+  .brand-tag{display:none}
+}
+</style>
+</head>
+<body>
+<!-- ===== Top bar ===== -->
+<div class="topbar">
+  <div class="container">
+    <div><span class="dot">✦</span> Office Staff on Duty Every Day: <b>8:00am – 4:00pm</b></div>
+    <div class="tb-right">
+      <span><a href="tel:+2349052905411">0905 290 5411</a> <span class="dot">·</span> <a href="tel:+2348166867749">0816 686 7749</a> <span class="dot">·</span> <a href="tel:+2347041116888">0704 111 6888</a></span>
+      <span><a href="mailto:higemchurch@gmail.com">higemchurch@gmail.com</a></span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Header ===== -->
+<header id="header">
+  <div class="container nav">
+    <a class="brand" href="#home">
+      <img src="logo.png" alt="His Grace Evangelical Movement logo">
+      <span>
+        <span class="brand-name">His Grace Evangelical Movement</span><br>
+        <span class="brand-tag">The Caring, Sharing and Soul-Winning Church</span>
+      </span>
+    </a>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#programmes">Programmes</a></li>
+        <li><a href="#leadership">Leadership</a></li>
+        <li><a href="#giving">Giving</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a class="btn btn-gold btn-nav" href="#giving">Give</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="hero" id="home">
+  <div class="hero-bg"><img src="building.jpg" alt="His Grace Evangelical Movement church auditorium"></div>
+  <div class="container hero-inner">
+    <span class="kicker">Welcome — We're Glad You're Here</span>
+    <h1>A Place of <em>Grace</em>, Growth &amp; Revival</h1>
+    <p class="lead">Join us at His Grace Evangelical Movement, Challenge, Ibadan — a family where the whole Word is ministered to the whole man, for the whole world.</p>
+    <div class="hero-cta">
+      <a class="btn btn-gold" href="#programmes">Plan Your Visit</a>
+      <a class="btn btn-ghost" href="#about">Get to Know Us</a>
+    </div>
+    <div class="theme-banner">
+      <span class="ty">2026 Theme</span>
+      <span class="tv">Our Year of Revitalization</span>
+      <span class="tr">"But they that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles" — Isaiah 40:31</span>
+    </div>
+  </div>
+  <div class="scroll-hint">Scroll</div>
+</section>
+
+<!-- ===== Info strip ===== -->
+<div class="info-strip">
+  <div class="container">
+    <div class="info-cell reveal">
+      <span class="ic"><svg fill="none" viewBox="0 0 24 24" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2" stroke-linecap="round"/></svg></span>
+      <div><h4>Sunday Celebration Service</h4><p>Every Sunday · <b style="color:#ffd95e">9:15am</b> — come worship with us</p></div>
+    </div>
+    <div class="info-cell reveal">
+      <span class="ic"><svg fill="none" viewBox="0 0 24 24" stroke-width="1.8"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
+      <div><h4>Find Us</h4><p>Plot 11, 13 &amp; 14, Adedeji Okubadejo Layout, Scout Camp Area, Challenge, Ibadan, Oyo State</p></div>
+    </div>
+    <div class="info-cell reveal">
+      <span class="ic"><svg fill="none" viewBox="0 0 24 24" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span>
+      <div><h4>Pastoral Care &amp; Prayer</h4><p><a href="tel:+2349052905411">0905 290 5411</a> · <a href="tel:+2348166867749">0816 686 7749</a> · <a href="tel:+2347041116888">0704 111 6888</a></p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== About / Get to Know Us ===== -->
+<section class="section" id="about">
+  <div class="container about-grid">
+    <div class="about-text reveal">
+      <span class="eyebrow">Welcome to Our World</span>
+      <h2>Get to Know Us</h2>
+      <p>We wish to welcome you to your year of Revitalization. As a church that cares for her members, we are glad to serve you with this information that enables you to know who to call in time of any need.</p>
+      <p>At His Grace Evangelical Movement, you will find a warm family of believers passionate about worship, the Word, and winning souls. Whether you are visiting for the first time or returning home, there is a place here for you.</p>
+      <div class="verse-card">
+        <q>But they that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles; they shall run, and not be weary; and they shall walk, and not faint.</q>
+        <cite>Isaiah 40:31 — Our 2026 Anchor</cite>
+      </div>
+    </div>
+    <div class="purpose-cards">
+      <div class="pcard reveal">
+        <span class="num">01</span>
+        <div><h3>Our Purpose</h3><p>To worship and glorify God, preach, teach and equip the saints to reach the un-reached with the gospel of Jesus Christ and plant self-reproducing churches.</p></div>
+      </div>
+      <div class="pcard reveal">
+        <span class="num">02</span>
+        <div><h3>Our Vision</h3><p>Ministering the whole Word to the whole man in the whole world.</p></div>
+      </div>
+      <div class="pcard reveal">
+        <span class="num">03</span>
+        <div><h3>Our Mission</h3><p>Win, train, equip and release men and women as world changers to harvest fields. <span class="ref">(Acts 17:6b)</span></p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Programmes ===== -->
+<section class="section prog" id="programmes">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Weekly Schedule</span>
+      <h2>Our Programmes</h2>
+      <p>There's always a place for you at His Grace. From early morning prayer to deep Bible teaching, join us any day of the week.</p>
+    </div>
+    <div class="prog-grid">
+      <div class="day-card reveal">
+        <div class="day-head"><h3>Sunday</h3><span class="dd">Lord's Day</span></div>
+        <ul class="prog-list">
+          <li><span class="pn">Workers Intercession</span><span class="pt">7:30 / 7:45am</span></li>
+          <li><span class="pn">Youth Service</span><span class="pt">8:00am</span></li>
+          <li><span class="pn">Corporate Prayer</span><span class="pt">8:00am</span></li>
+          <li><span class="pn">Sunday Bible School</span><span class="pt">8:30am</span></li>
+          <li><span class="pn">Children's Service</span><span class="pt">8:45am</span></li>
+          <li><span class="pn">Celebration Service</span><span class="pt">9:15am</span></li>
+        </ul>
+      </div>
+      <div class="day-card reveal">
+        <div class="day-head"><h3>Monday</h3><span class="dd">New Week</span></div>
+        <ul class="prog-list">
+          <li><span class="pn">Morning Glory</span><span class="pt">6:00 – 6:45am</span></li>
+          <li><span class="pn">Senior Citizens / Precious Mothers</span><span class="pt">4:00 – 5:30pm</span><span class="prog-note">1st &amp; last Monday of the month</span></li>
+        </ul>
+      </div>
+      <div class="day-card reveal">
+        <div class="day-head"><h3>Tuesday</h3><span class="dd">In the Word</span></div>
+        <ul class="prog-list">
+          <li><span class="pn">Deeper Bible Teaching</span><span class="pt">5:00 – 6:00pm</span></li>
+        </ul>
+      </div>
+      <div class="day-card reveal">
+        <div class="day-head"><h3>Wednesday</h3><span class="dd">Midweek</span></div>
+        <ul class="prog-list">
+          <li><span class="pn">Possibility Prayer</span><span class="pt">9:00 – 11:30am</span></li>
+        </ul>
+      </div>
+      <div class="day-card reveal">
+        <div class="day-head"><h3>Thursday</h3><span class="dd">Revival</span></div>
+        <ul class="prog-list">
+          <li><span class="pn">Miracle Prayer &amp; Revival Hour</span><span class="pt">5:00 – 6:00pm</span></li>
+        </ul>
+      </div>
+      <div class="day-card reveal">
+        <div class="day-head"><h3>Office</h3><span class="dd">Daily</span></div>
+        <ul class="prog-list">
+          <li><span class="pn">Office Staff on Duty</span><span class="pt">8:00am – 4:00pm</span><span class="prog-note">Every day — walk in any time</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="monthly">
+      <div class="mcard reveal">
+        <span class="mtag">1st Day of Every Month</span>
+        <h3>Bless My Month Program</h3>
+        <p>Start every month with a decree of blessing and thanksgiving.</p>
+        <span class="mtime">6:00 – 7:00am</span>
+      </div>
+      <div class="mcard reveal">
+        <span class="mtag">1st Friday of Every Month</span>
+        <h3>Pastors' Wives / Female Ministers' Forum</h3>
+        <p>A gathering for women in ministry to fellowship, share and be strengthened.</p>
+        <span class="mtime">4:00 – 6:00pm</span>
+      </div>
+      <div class="mcard reveal">
+        <span class="mtag">Last Friday of Every Month</span>
+        <h3>Power &amp; Victory Night</h3>
+        <p>An all-night vigil of prayer, praise and breakthrough until dawn.</p>
+        <span class="mtime">10:00pm till dawn</span>
+      </div>
+    </div>
+
+    <!-- Pastoral Care Banner preserved from section below -->
+    <div style="margin-top: 2.5rem;">
+      <div class="care-band reveal">
+        <span class="ci"><svg fill="none" viewBox="0 0 24 24" stroke-width="1.8"><path d="M12 21s-7-4.6-9.2-9A5.4 5.4 0 0 1 12 6.2 5.4 5.4 0 0 1 21.2 12C19 16.4 12 21 12 21z"/></svg></span>
+        <div>
+          <h3>For Pastoral Counsel &amp; Prayer Emergency</h3>
+          <p>Pastors are available to attend to you. Call <a href="tel:+2349052905411">0905 290 5411</a>, <a href="tel:+2348166867749">0816 686 7749</a> or <a href="tel:+2347041116888">0704 111 6888</a> — any time you need someone to stand with you in prayer.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Leadership ===== -->
+<section class="section" id="leadership">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Servant Leaders</span>
+      <h2>Our Leadership</h2>
+      <p>Meet the servants God has set over His Grace Evangelical Movement.</p>
+    </div>
+    <div class="lead-grid">
+      <div class="lead-main reveal">
+        <img src="founders.jpg" alt="Apostle Dr. Nicholas D. and Rev. (Mrs) Mojisola A. Osameyan">
+        <div class="lead-body">
+          <span class="lrole">Founders / General Overseers</span>
+          <h3>Apostle Dr. Nicholas D. &amp; Rev. (Mrs) Mojisola A. Osameyan</h3>
+          <p>Called to win, train, equip and release men and women as world changers, our General Overseers shepherd His Grace Evangelical Movement with a passion for souls, revival and the planting of self-reproducing churches.</p>
+        </div>
+      </div>
+      <div class="lead-side">
+        <div class="lead-pastor reveal">
+          <img src="pastor.jpg" alt="Pastor Kasumu Biodun">
+          <div>
+            <span class="pname">Pastor Kasumu Biodun</span>
+            <span class="prole">Resident Pastor (HQ)</span>
+            <p class="ptext">Serves at the headquarters in Challenge, Ibadan — caring for the flock day by day.</p>
+          </div>
+        </div>
+        <div class="acmi reveal">
+          <span class="eyebrow">Equipping the Saints</span>
+          <h4 style="margin-top:.5rem">Christian Training Institute via ACMI</h4>
+          <p>We offer a Christian Training Institute Educational Program via ACMI — raising equipped, discipled believers for the work of ministry.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Giving ===== -->
+<section class="section give" id="giving">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Sowing into the Kingdom</span>
+      <h2>Giving &amp; Church Banking Details</h2>
+      <p>Give your tithes, offerings and project support into any of the accounts below. Thank you for partnering with what God is doing at His Grace.</p>
+    </div>
+    <div class="give-grid">
+      <div class="give-card reveal">
+        <div class="glabel">Tithe / Project</div>
+        <h3>First Bank of Nigeria (FBN)</h3>
+        <div class="acct">
+          <div><div class="anum">2015912114</div><div class="abank">First Bank of Nigeria</div></div>
+          <button class="copy-btn" data-copy="2015912114">Copy</button>
+        </div>
+      </div>
+      <div class="give-card reveal">
+        <div class="glabel">F.P.O. (Faith Promise Offering)</div>
+        <h3>First Bank of Nigeria (FBN)</h3>
+        <div class="acct">
+          <div><div class="anum">2001870138</div><div class="abank">First Bank of Nigeria</div></div>
+          <button class="copy-btn" data-copy="2001870138">Copy</button>
+        </div>
+      </div>
+      <div class="give-card reveal">
+        <div class="glabel">Offering</div>
+        <h3>United Bank for Africa (UBA)</h3>
+        <div class="acct">
+          <div><div class="anum">1000166279</div><div class="abank">United Bank for Africa</div></div>
+          <button class="copy-btn" data-copy="1000166279">Copy</button>
+        </div>
+      </div>
+    </div>
+    <p class="give-name reveal">Account Name: <b>His Grace Evangelical Movement</b></p>
+  </div>
+</section>
+
+<!-- ===== Contact ===== -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">We'd Love to Hear From You</span>
+      <h2>Visit or Contact Us</h2>
+      <p>Our doors — and our office — are open to you every day. Reach out, or better still, come worship with us.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="c-card reveal">
+        <h3>Church Information</h3>
+        <div class="c-row">
+          <span class="ci2"><svg fill="none" viewBox="0 0 24 24" stroke-width="1.8"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
+          <div><b>Address</b><span>Plot 11, 13 &amp; 14, Adedeji Okubadejo Layout, Scout Camp Area, Challenge, Ibadan, Oyo State, Nigeria</span></div>
+        </div>
+        <div class="c-row">
+          <span class="ci2"><svg fill="none" viewBox="0 0 24 24" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span>
+          <div><b>Telephone</b><span><a href="tel:+2349052905411">0905 290 5411</a> · <a href="tel:+2348166867749">0816 686 7749</a> · <a href="tel:+2347041116888">0704 111 6888</a></span></div>
+        </div>
+        <div class="c-row">
+          <span class="ci2"><svg fill="none" viewBox="0 0 24 24" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+          <div><b>Email</b><a href="mailto:higemchurch@gmail.com">higemchurch@gmail.com</a></div>
+        </div>
+        <div class="c-row">
+          <span class="ci2"><svg fill="none" viewBox="0 0 24 24" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z"/></svg></span>
+          <div><b>Website</b><a href="https://www.higeminternational.com" target="_blank" rel="noopener">www.higeminternational.com</a></div>
+        </div>
+        <div class="c-row">
+          <span class="ci2"><svg fill="none" viewBox="0 0 24 24" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2" stroke-linecap="round"/></svg></span>
+          <div><b>Office Hours</b><span>Monday – Sunday · 8:00am – 4:00pm</span></div>
+        </div>
+      </div>
+      <div class="c-card reveal">
+        <h3>Send Us a Message</h3>
+        <form class="form" id="contactForm">
+          <div><label for="cf-name">Full Name</label><input id="cf-name" type="text" placeholder="Your name" required></div>
+          <div><label for="cf-phone">Phone / Email</label><input id="cf-phone" type="text" placeholder="How can we reach you?" required></div>
+          <div><label for="cf-req">I need…</label>
+            <select id="cf-req">
+              <option>Prayer &amp; pastoral counsel</option>
+              <option>Information about programmes</option>
+              <option>ACMI / Training Institute</option>
+              <option>Partnership &amp; giving</option
+              <option>Other</option>
+              </select>
+          </div>
+          <div><label for="cf-msg">Message</label><textarea id="cf-msg" placeholder="How can we serve you?"></textarea></div>
+          <button class="btn btn-navy" type="submit" style="justify-content:center">Send Message</button>
+          <p style="font-size:.75rem;color:var(--muted)">This form opens your email app addressed to higemchurch@gmail.com — no data is stored online.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+footer>
+  <div class="container">
+    <div class="f-grid">
+      <div>
+        <div class="f-brand"><img src="logo.png" alt="His Grace Evangelical Movement logo"><span>His Grace Evangelical Movement</span></div>
+        <p class="f-verse">"But they that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles." — Isaiah 40:31</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#programmes">Our Programmes</a></li>
+          <li><a href="#leadership">Leadership</a></li>
+          <li><a href="#giving">Giving</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Gather With Us</h4>
+        <ul>
+          <li>Sunday Celebration — 9:15am</li>
+          <li>Possibility Prayer (Wed) — 9:00am</li>
+          <li>Deeper Bible Teaching (Tue) — 5:00pm</li>
+          <li>Power &amp; Victory Night — Last Friday</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>Plot 11, 13 &amp; 14, Adedeji Okubadejo Layout, Scout Camp Area, Challenge, Ibadan</li>
+          <li><a href="mailto:higemchurch@gmail.com">higemchurch@gmail.com</a></li>
+          <li><a href="tel:+2349052905411">0905 290 5411</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>© <span id="yr">2026</span> <b>His Grace Evangelical Movement</b>. All rights reserved.</span>
+      <span>The Caring, Sharing and Soul-Winning Church</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status"></div>
+<button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+<script>
+(function(){
+  // Sticky header shadow
+  var header=document.getElementById('header');
+  window.addEventListener('scroll',function(){
+    header.classList.toggle('scrolled',window.scrollY>10);
+    document.getElementById('toTop').classList.toggle('show',window.scrollY>600);
+  },{passive:true});
+  document.getElementById('toTop').addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+
+  // Mobile menu
+  var burger=document.getElementById('hamburger'),links=document.getElementById('navLinks');
+  burger.addEventListener('click',function(){
+    burger.classList.toggle('open');links.classList.toggle('open');
+  });
+  links.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){burger.classList.remove('open');links.classList.remove('open');});
+  });
+
+  // Scroll reveal
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+  // Toast helper
+  var toast=document.getElementById('toast'),tTimer;
+  function showToast(msg){
+    toast.textContent=msg;toast.classList.add('show');
+    clearTimeout(tTimer);tTimer=setTimeout(function(){toast.classList.remove('show');},3200);
+  }
+
+  // Copy account numbers
+  document.querySelectorAll('.copy-btn').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var num=btn.getAttribute('data-copy');
+      function done(){btn.textContent='Copied ✓';showToast('Account number '+num+' copied to clipboard');setTimeout(function(){btn.textContent='Copy';},2000);}
+      if(navigator.clipboard&&navigator.clipboard.writeText){
+        navigator.clipboard.writeText(num).then(done).catch(function(){fallback();});
+      }else{fallback();}
+      function fallback(){
+        var ta=document.createElement('textarea');ta.value=num;document.body.appendChild(ta);
+        ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);done();
+      }
+    });
+  });
+
+  // Contact form -> mailto
+  document.getElementById('contactForm').addEventListener('submit',function(ev){
+    ev.preventDefault();
+    var name=document.getElementById('cf-name').value.trim();
+    var phone=document.getElementById('cf-phone').value.trim();
+    var req=document.getElementById('cf-req').value;
+    var msg=document.getElementById('cf-msg').value.trim();
+    var body='Hello His Grace Evangelical Movement,%0D%0A%0D%0AName: '+encodeURIComponent(name)
+      +'%0D%0AReach me at: '+encodeURIComponent(phone)
+      +'%0D%0ANeed: '+encodeURIComponent(req)
+      +'%0D%0A%0D%0AMessage:%0D%0A'+encodeURIComponent(msg||'(none)')+'%0D%0A';
+    window.location.href='mailto:higemchurch@gmail.com?subject='+encodeURIComponent('Website Message — '+name)+'&body='+body;
+    showToast('Opening your email app… Thank you, '+name.split(' ')[0]+'! God bless you.');
+    this.reset();
+  });
+
+  // Footer year
+  document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
